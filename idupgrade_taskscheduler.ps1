@@ -9,7 +9,7 @@ else{
     $softver='C:\Program Files (x86)\Open-EID\ID-updater.exe'
 }
 
-$soft = New-ScheduledTaskAction -Execute $softver -Argument '-autoupdate'
+$soft = New-ScheduledTaskAction -Execute $softver -Argument '-autoupdate -autoclose'
 $trigger = New-ScheduledTaskTrigger -AtStartup
 $settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable
 
