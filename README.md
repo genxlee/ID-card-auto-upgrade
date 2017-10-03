@@ -1,5 +1,5 @@
 # ID-Card Auto upgrade
-Following powershell script adds ID-updater.exe to Task Scheduler so it will be run silently at system start-up.
+Following powershell script adds ID-updater.exe to Task Scheduler so it will keep your Open-EID software up-to-date.
 
 You can run it from elevated CMD:
 
