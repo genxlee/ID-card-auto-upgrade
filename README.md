@@ -1,6 +1,7 @@
 # Open-EID Auto upgrade
-Following powershell script adds ID-updater.exe to Task Scheduler so it will keep your Open-EID software at every boot up-to-date.
 
-You can run it from elevated CMD:
+## idupgrade_taskscheduler.ps1
+Adds Task Scheduler task running ID-updater.exe with silent switches keeping Open-EID software at every boot up-to-date.
 
-    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/genxlee/IDCard-upgrade/master/idupgrade_taskscheduler.ps1'))"
+## software_open-eid.ps1
+Updates installed Open-EID, if Open-EID is missing, then it is installed. Useful to make sure that system always has Open-EID installed with latest updates. This script should be executed periodically.. for example with PDQ, Ansible or Windows Task Scheduler.
